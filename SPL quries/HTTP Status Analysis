@@ -1,0 +1,2 @@
+index=soc_lab
+| stats count by status
