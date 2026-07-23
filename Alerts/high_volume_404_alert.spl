@@ -1,3 +1,19 @@
-index=soc_lab status=404
-| stats count by clientip
-| where count > 20
+SPL:
+    index=soc_lab status=404
+    | stats count by clientip
+    | where count > 20
+
+Alert Type:
+    Scheduled
+
+Run Every:
+    5 minutes
+
+Trigger Condition:
+    Number of Results > 0
+
+Severity:
+    Medium
+
+Trigger Actions:
+    Add to Triggered Alerts
